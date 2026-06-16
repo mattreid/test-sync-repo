@@ -14,7 +14,7 @@ githubProjects:
 # Status mappings (GitHub → Jira)
 statusTypeMappings:
   - name: Test Status Mapping
-    default: Todo
+    default: New
     mapping:
       - fromGithub: Todo
         toJira: New
