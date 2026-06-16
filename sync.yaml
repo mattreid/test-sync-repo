@@ -43,7 +43,7 @@ syncProjects:
     github:
       owner: mattreid           # ← UPDATE THIS
       repo: test-sync-repo             # ← UPDATE THIS
-      project: @mattreid's Test sync project
+      project: Test sync project
       afterDate: 2026-06-01            # Sync issues updated after this date
     useMapping:
       issueType: Test Issue Mapping
