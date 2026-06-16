@@ -1,0 +1,55 @@
+# GitHub Projects configuration
+githubProjects:
+  - name: @mattreid's Test sync project
+    storyPoints:
+      fieldName: Story Points
+      type: number
+    status:
+      fieldName: Status
+      type: singleSelect
+    sprint:
+      fieldName: Iteration
+      type: iteration
+
+# Status mappings (GitHub → Jira)
+statusTypeMappings:
+  - name: Test Status Mapping
+    default: Todo
+    mapping:
+      - fromGithub: Todo
+        toJira: New
+      - fromGithub: In progress
+        toJira: In Progress
+      - fromGithub: Done
+        toJira: Closed
+
+# Issue type mappings (GitHub labels → Jira issue types)
+issuesTypeMappings:
+  - name: Test Issue Mapping
+    default: Task
+    mapping:
+      - fromGithubLabel: epic
+        toJira: Epic
+      - fromGithubLabel: bug
+        toJira: Bug
+      - fromGithubLabel: task
+        toJira: Task
+      - fromGithubLabel: story
+        toJira: Story
+
+# Sync configuration
+syncProjects:
+  - name: "Jira Sync Test"
+    github:
+      owner: mattreid           # ← UPDATE THIS
+      repo: test-sync-repo             # ← UPDATE THIS
+      project: @mattreid's Test sync project
+      afterDate: 2026-06-01            # Sync issues updated after this date
+    useMapping:
+      issueType: Test Issue Mapping
+      statusType: Test Status Mapping
+    jira:
+      projectKey: DPROD               # ← UPDATE THIS
+      component: Upstream        # ← UPDATE THIS
+      sprintBoard: DPROD Kanban          # ← UPDATE THIS (your board name)
+    maxBatchSize: 15
