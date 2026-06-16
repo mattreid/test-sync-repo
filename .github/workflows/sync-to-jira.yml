@@ -24,6 +24,8 @@ jobs:
             cat sync-state.yaml
           fi
 
+      - name: Enable debug logging
+        run: echo "ACTIONS_STEP_DEBUG=true" >> $GITHUB_ENV
         # use development branch of the action (next is the build from the main branch)
       - name: Run GitHub to Jira Action
         uses: mattreid/github-to-jira-action@jira-cloud-refactor
