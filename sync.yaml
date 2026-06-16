@@ -51,5 +51,5 @@ syncProjects:
     jira:
       projectKey: DPROD               # ← UPDATE THIS
       component: Upstream        # ← UPDATE THIS
-      sprintBoard: DPROD Kanban          # ← UPDATE THIS (your board name)
+      sprintBoard: GH Sync Test          # ← UPDATE THIS (your board name)
     maxBatchSize: 15
