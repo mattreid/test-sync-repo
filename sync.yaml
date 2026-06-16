@@ -1,6 +1,6 @@
 # GitHub Projects configuration
 githubProjects:
-  - name: @mattreid's Test sync project
+  - name: Test sync project
     storyPoints:
       fieldName: Story Points
       type: number
