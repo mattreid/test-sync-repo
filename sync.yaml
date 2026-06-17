@@ -63,7 +63,7 @@ syncProjects:
     useMapping:
       issueType: Test Issue Mapping
       statusType: Test Status Mapping
-      prioityType: My Priority Mapping
+      priorityType: My Priority Mapping
     jira:
       projectKey: DPROD               # ← UPDATE THIS
       component: Upstream        # ← UPDATE THIS
