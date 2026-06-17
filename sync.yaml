@@ -10,6 +10,9 @@ githubProjects:
     sprint:
       fieldName: Iteration
       type: iteration
+    priority:
+      fieldName: Priority
+      type: singleSelect
 
 # Status mappings (GitHub → Jira)
 statusTypeMappings:
