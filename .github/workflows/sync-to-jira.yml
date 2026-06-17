@@ -34,6 +34,7 @@ jobs:
           jira-email: ${{ secrets.JIRA_EMAIL }}
           jira-write-token: ${{ secrets.JIRA_WRITE_TOKEN }}
           github-read-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GH_PROJECT_TOKEN }}
 
         # save the state using a custom token as default GITHUB_TOKEN does not have the required permissions
         # to save variables
