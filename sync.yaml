@@ -37,6 +37,18 @@ issuesTypeMappings:
       - fromGithubLabel: story
         toJira: Story
 
+# Priority mappings (GitHub → Jira)
+priorityTypeMappings:           # Optional - omit if not syncing priority
+  - name: My Priority Mapping
+    default: Normal              # Default Jira priority when no mapping matches
+    mapping:
+      - fromGithub: P0     # Exact GitHub priority value
+        toJira: Critical         # Jira priority name (depends on your Jira instance)
+      - fromGithub: P1
+        toJira: Major
+      - fromGithub: P0
+        toJira: Minor
+
 # Sync configuration
 syncProjects:
   - name: "Jira Sync Test"
@@ -48,6 +60,7 @@ syncProjects:
     useMapping:
       issueType: Test Issue Mapping
       statusType: Test Status Mapping
+      prioityType: My Priority Mapping
     jira:
       projectKey: DPROD               # ← UPDATE THIS
       component: Upstream        # ← UPDATE THIS
