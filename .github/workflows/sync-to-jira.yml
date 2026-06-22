@@ -37,9 +37,9 @@ jobs:
 
         # save the state using a custom token as default GITHUB_TOKEN does not have the required permissions
         # to save variables
-    #  - name: persist state
-    #    env:
-    #      GH_TOKEN: ${{ secrets.SET_VARIABLE_GITHUB_TOKEN }}
-    #    run: |
+      - name: persist state
+        env:
+          GH_TOKEN: ${{ secrets.SET_VARIABLE_GITHUB_TOKEN }}
+        run: |
           # use gh cli to save the content of a file into a variable
-    #      gh variable set SYNC_STATE < sync-state.yaml
+          gh variable set SYNC_STATE < sync-state.yaml
