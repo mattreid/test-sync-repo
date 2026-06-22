@@ -69,3 +69,23 @@ syncProjects:
       component: Upstream        # ← UPDATE THIS
       sprintBoard: GH Sync Test          # ← UPDATE THIS (your board name)
     maxBatchSize: 15
+
+      # NEW: External repo - basic mode
+  - name: "Fabric8 Kubernetes Client - manusa's issues"
+    github:
+      owner: fabric8io
+      repo: kubernetes-client
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic                  # Basic mode - no Projects v2, no token required
+      assigneeAllowlist:               # Only sync issues assigned to manusa
+        - manusa
+    useMapping:
+      issueType: Test Issue Mapping
+      statusType: Test Status Mapping
+      priorityType: My Priority Mapping
+    jira:
+      projectKey: DPROD
+      component: Upstream
+      globalIdPrefix: FABRIC8-K8S
+      sprintBoard: ""                  # Not used in basic mode
+    maxBatchSize: 50
