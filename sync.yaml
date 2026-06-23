@@ -1,3 +1,75 @@
+# Team definitions
+teams:
+  - name: DevSpaces
+    members:
+      - mbenitez1607
+      - AndrienkoAleksandr
+      - fbricon
+      - ibuziuk
+      - bianicu
+      - mkuznyetsov
+      - vinokurig
+      - SDawley
+      - svor
+      - olexii4
+      - artaleks9
+      - olkornii
+      - SkorikSergey
+      - dmytro-ndp
+      - ericwill
+      - sbouchet
+      - azatsarynnyy
+      - msivasubramaniaan
+      - rgrunber
+      - adietish
+      - RomanNikitenko
+      - vitaliy-guliy
+      - oskutka
+      - rohanKanojia
+      - btjd
+      - dkwon17
+      - tolusha
+      - akurinnoy
+      - musienko-maxim
+
+  - name: Jkube
+    members:
+      - manusa
+      - ash-thakur-rh
+
+  - name: PodmanDesktop
+    members:
+      - deboer-tim
+      - vancura
+      - albfan
+      - praveenkumar
+      - vyasgun
+      - lstocchi
+      - cfergeau
+      - anjannath
+      - redbeam
+      - rujutashinde
+      - danivilla9
+      - cbr7
+      - serbangeorge-m
+      - cdrage
+      - MarsKubeX
+      - SoniaSandler
+      - jeffmaury
+      - feloy
+      - axel7083
+      - simonrey1
+      - bmahabirbu
+      - benoitf
+      - jiridostal
+      - amisskii
+      - JustMell0
+      - gastoner
+      - ScrewTSW
+      - odockal
+      - dgolovin
+      - vzhukovs
+
 # GitHub Projects configuration
 githubProjects:
   - name: Test sync project
@@ -56,29 +128,11 @@ priorityTypeMappings:           # Optional - omit if not syncing priority
 syncProjects:
   - name: "Jira Sync Test"
     github:
-      owner: mattreid           # ← UPDATE THIS
-      repo: test-sync-repo             # ← UPDATE THIS
-      project: Test sync project
+      owner: mattreid
+      repo: test-sync-repo
+      projectsV2Board: Test sync project
       afterDate: 2026-06-01            # Sync issues updated after this date
-    useMapping:
-      issueType: Test Issue Mapping
-      statusType: Test Status Mapping
-      priorityType: My Priority Mapping
-    jira:
-      projectKey: DPROD               # ← UPDATE THIS
-      component: Upstream        # ← UPDATE THIS
-      sprintBoard: GH Sync Test          # ← UPDATE THIS (your board name)
-    maxBatchSize: 15
-
-      # NEW: External repo - basic mode
-  - name: "Fabric8 Kubernetes Client - manusa's issues"
-    github:
-      owner: fabric8io
-      repo: kubernetes-client
-      afterDate: "2026-06-01T00:00:00Z"
-      syncMode: basic                  # Basic mode - no Projects v2, no token required
-      assigneeAllowlist:               # Only sync issues assigned to manusa
-        - manusa
+      syncMode: full                   # Full mode with Projects v2
     useMapping:
       issueType: Test Issue Mapping
       statusType: Test Status Mapping
@@ -86,6 +140,106 @@ syncProjects:
     jira:
       projectKey: DPROD
       component: Upstream
-      globalIdPrefix: FABRIC8-K8S
-      sprintBoard: ""                  # Not used in basic mode
+      globalIdPrefix: TEST-SYNC
+      sprintBoard: GH Sync Test
+    maxBatchSize: 15
+
+  # ============================================================================
+  # Jkube Team - Multiple Repos
+  # ============================================================================
+
+  - name: "Jkube - fabric8io/kubernetes-client"
+    github:
+      owner: fabric8io
+      repo: kubernetes-client
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:Jkube
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: fabric8io/kubernetes-client
+      globalIdPrefix: JKUBE-FABRIC8-K8S
+    maxBatchSize: 50
+
+  - name: "Jkube - eclipse-jkube/jkube"
+    github:
+      owner: eclipse-jkube
+      repo: jkube
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:Jkube
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: eclipse-jkube/jkube
+      globalIdPrefix: JKUBE-ECLIPSE-JKUBE
+    maxBatchSize: 50
+
+  - name: "Jkube - cekit/actions-setup-cekit"
+    github:
+      owner: cekit
+      repo: actions-setup-cekit
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:Jkube
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: cekit/actions-setup-cekit
+      globalIdPrefix: JKUBE-CEKIT-SETUP
+    maxBatchSize: 50
+
+  - name: "Jkube - quarkusio/quarkus"
+    github:
+      owner: quarkusio
+      repo: quarkus
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:Jkube
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: quarkusio/quarkus
+      globalIdPrefix: JKUBE-QUARKUS
+    maxBatchSize: 50
+
+  - name: "Jkube - eclipse-jkube/kport"
+    github:
+      owner: eclipse-jkube
+      repo: kport
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:Jkube
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: eclipse-jkube/kport
+      globalIdPrefix: JKUBE-KPORT
+    maxBatchSize: 50
+
+  - name: "Jkube - eclipse-jkube/jkube-images"
+    github:
+      owner: eclipse-jkube
+      repo: jkube-images
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:Jkube
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: eclipse-jkube/jkube-images
+      globalIdPrefix: JKUBE-IMAGES
     maxBatchSize: 50
