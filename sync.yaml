@@ -37,17 +37,21 @@ teams:
       - manusa
       - ash-thakur-rh
 
+  - name: CRC
+    members:
+      - lstocchi
+      - vyasgun
+      - albfan
+      - anjannath
+      - evidolob
+      - redbeam
+      - cfergeau
+      - praveenkumar
+
   - name: PodmanDesktop
     members:
       - deboer-tim
       - vancura
-      - albfan
-      - praveenkumar
-      - vyasgun
-      - lstocchi
-      - cfergeau
-      - anjannath
-      - redbeam
       - rujutashinde
       - danivilla9
       - cbr7
@@ -242,4 +246,938 @@ syncProjects:
       projectKey: DPROD
       component: eclipse-jkube/jkube-images
       globalIdPrefix: JKUBE-IMAGES
+    maxBatchSize: 50
+
+    # ============================================================================
+    # CRC Team - Multiple Repos
+    # ============================================================================
+
+  - name: "CRC - crc-org/crc"
+    github:
+      owner: crc-org
+      repo: crc
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:CRC
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: crc-org/crc
+      globalIdPrefix: CRC-CRC
+    maxBatchSize: 50
+
+  - name: "CRC - crc-org/snc"
+    github:
+      owner: crc-org
+      repo: snc
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:CRC
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: crc-org/snc
+      globalIdPrefix: CRC-SNC
+    maxBatchSize: 50
+
+  - name: "CRC - crc-org/vfkit"
+    github:
+      owner: crc-org
+      repo: vfkit
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:CRC
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: crc-org/vfkit
+      globalIdPrefix: CRC-VFKIT
+    maxBatchSize: 50
+
+  - name: "CRC - crc-org/macadam"
+    github:
+      owner: crc-org
+      repo: macadam
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:CRC
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: crc-org/macadam
+      globalIdPrefix: CRC-MACADAM
+    maxBatchSize: 50
+
+  - name: "CRC - crc-org/crc-trigger"
+    github:
+      owner: crc-org
+      repo: crc-trigger
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:CRC
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: crc-org/crc-trigger
+      globalIdPrefix: CRC-TRIGGER
+    maxBatchSize: 50
+
+  - name: "CRC - crc-org/admin-helper"
+    github:
+      owner: crc-org
+      repo: admin-helper
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:CRC
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: crc-org/admin-helper
+      globalIdPrefix: CRC-ADMIN
+    maxBatchSize: 50
+
+  - name: "CRC - containers/podman"
+    github:
+      owner: containers
+      repo: podman
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:CRC
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: containers/podman
+      globalIdPrefix: CRC-PODMAN
+    maxBatchSize: 50
+
+  - name: "CRC - openshift/release"
+    github:
+      owner: openshift
+      repo: release
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:CRC
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: openshift/release
+      globalIdPrefix: CRC-RELEASE
+    maxBatchSize: 50
+
+  # ============================================================================
+  # DevSpaces Team - Multiple Repos
+  # ============================================================================
+
+  # Eclipse Che repos
+  - name: "DevSpaces - eclipse-che/che-dashboard"
+    github:
+      owner: eclipse-che
+      repo: che-dashboard
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:DevSpaces
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: eclipse-che/che-dashboard
+      globalIdPrefix: DEVSPACES-CHE-DASH
+    maxBatchSize: 50
+
+  - name: "DevSpaces - eclipse-che/che-operator"
+    github:
+      owner: eclipse-che
+      repo: che-operator
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:DevSpaces
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: eclipse-che/che-operator
+      globalIdPrefix: DEVSPACES-CHE-OP
+    maxBatchSize: 50
+
+  - name: "DevSpaces - eclipse-che/che-server"
+    github:
+      owner: eclipse-che
+      repo: che-server
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:DevSpaces
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: eclipse-che/che-server
+      globalIdPrefix: DEVSPACES-CHE-SRV
+    maxBatchSize: 50
+
+  - name: "DevSpaces - eclipse-che/che-machine-exec"
+    github:
+      owner: eclipse-che
+      repo: che-machine-exec
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:DevSpaces
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: eclipse-che/che-machine-exec
+      globalIdPrefix: DEVSPACES-CHE-EXEC
+    maxBatchSize: 50
+
+  - name: "DevSpaces - eclipse-che/che"
+    github:
+      owner: eclipse-che
+      repo: che
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:DevSpaces
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: eclipse-che/che
+      globalIdPrefix: DEVSPACES-CHE
+    maxBatchSize: 50
+
+  # Devfile repos
+  - name: "DevSpaces - devfile/devworkspace-generator"
+    github:
+      owner: devfile
+      repo: devworkspace-generator
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:DevSpaces
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: devfile/devworkspace-generator
+      globalIdPrefix: DEVSPACES-DW-GEN
+    maxBatchSize: 50
+
+  - name: "DevSpaces - devfile/devworkspace-operator"
+    github:
+      owner: devfile
+      repo: devworkspace-operator
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:DevSpaces
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: devfile/devworkspace-operator
+      globalIdPrefix: DEVSPACES-DW-OP
+    maxBatchSize: 50
+
+  - name: "DevSpaces - devfile/developer-images"
+    github:
+      owner: devfile
+      repo: developer-images
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:DevSpaces
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: devfile/developer-images
+      globalIdPrefix: DEVSPACES-DEV-IMG
+    maxBatchSize: 50
+
+  # Red Hat Developer repos
+  - name: "DevSpaces - redhat-developer/web-terminal-operator"
+    github:
+      owner: redhat-developer
+      repo: web-terminal-operator
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:DevSpaces
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: redhat-developer/web-terminal-operator
+      globalIdPrefix: DEVSPACES-WT-OP
+    maxBatchSize: 50
+
+  - name: "DevSpaces - redhat-developer/web-terminal-exec"
+    github:
+      owner: redhat-developer
+      repo: web-terminal-exec
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:DevSpaces
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: redhat-developer/web-terminal-exec
+      globalIdPrefix: DEVSPACES-WT-EXEC
+    maxBatchSize: 50
+
+  - name: "DevSpaces - redhat-developer/web-terminal-tooling"
+    github:
+      owner: redhat-developer
+      repo: web-terminal-tooling
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:DevSpaces
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: redhat-developer/web-terminal-tooling
+      globalIdPrefix: DEVSPACES-WT-TOOL
+    maxBatchSize: 50
+
+  - name: "DevSpaces - redhat-developer/devspaces-gateway-plugin"
+    github:
+      owner: redhat-developer
+      repo: devspaces-gateway-plugin
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:DevSpaces
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: redhat-developer/devspaces-gateway-plugin
+      globalIdPrefix: DEVSPACES-GATEWAY
+    maxBatchSize: 50
+
+  - name: "DevSpaces - redhat-developer/vscode-openshift-tools"
+    github:
+      owner: redhat-developer
+      repo: vscode-openshift-tools
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:DevSpaces
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: redhat-developer/vscode-openshift-tools
+      globalIdPrefix: DEVSPACES-VSCODE-OS
+    maxBatchSize: 50
+
+  - name: "DevSpaces - redhat-developer/devspaces-remote-ssh"
+    github:
+      owner: redhat-developer
+      repo: devspaces-remote-ssh
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:DevSpaces
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: redhat-developer/devspaces-remote-ssh
+      globalIdPrefix: DEVSPACES-SSH
+    maxBatchSize: 50
+
+  - name: "DevSpaces - redhat-developer/devspaces-toolbox-plugin"
+    github:
+      owner: redhat-developer
+      repo: devspaces-toolbox-plugin
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:DevSpaces
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: redhat-developer/devspaces-toolbox-plugin
+      globalIdPrefix: DEVSPACES-TOOLBOX
+    maxBatchSize: 50
+
+  - name: "DevSpaces - redhat-developer/vscode-java"
+    github:
+      owner: redhat-developer
+      repo: vscode-java
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:DevSpaces
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: redhat-developer/vscode-java
+      globalIdPrefix: DEVSPACES-VSCODE-JAVA
+    maxBatchSize: 50
+
+  # Che Incubator repos
+  - name: "DevSpaces - che-incubator/chectl"
+    github:
+      owner: che-incubator
+      repo: chectl
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:DevSpaces
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: che-incubator/chectl
+      globalIdPrefix: DEVSPACES-CHECTL
+    maxBatchSize: 50
+
+  - name: "DevSpaces - che-incubator/configbump"
+    github:
+      owner: che-incubator
+      repo: configbump
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:DevSpaces
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: che-incubator/configbump
+      globalIdPrefix: DEVSPACES-CFGBUMP
+    maxBatchSize: 50
+
+  - name: "DevSpaces - che-incubator/che-code"
+    github:
+      owner: che-incubator
+      repo: che-code
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:DevSpaces
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: che-incubator/che-code
+      globalIdPrefix: DEVSPACES-CHE-CODE
+    maxBatchSize: 50
+
+  - name: "DevSpaces - che-incubator/jetbrains-ide-dev-server"
+    github:
+      owner: che-incubator
+      repo: jetbrains-ide-dev-server
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:DevSpaces
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: che-incubator/jetbrains-ide-dev-server
+      globalIdPrefix: DEVSPACES-JETBRAINS
+    maxBatchSize: 50
+
+  # ============================================================================
+  # PodmanDesktop Team - Multiple Repos
+  # ============================================================================
+
+  # Containers repos
+  - name: "PodmanDesktop - containers/podman"
+    github:
+      owner: containers
+      repo: podman
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:PodmanDesktop
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: containers/podman
+      globalIdPrefix: PD-PODMAN
+    maxBatchSize: 50
+
+  - name: "PodmanDesktop - containers/podman-desktop-extension-ai-lab"
+    github:
+      owner: containers
+      repo: podman-desktop-extension-ai-lab
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:PodmanDesktop
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: containers/podman-desktop-extension-ai-lab
+      globalIdPrefix: PD-AI-LAB
+    maxBatchSize: 50
+
+  - name: "PodmanDesktop - containers/podman-desktop-extension-ai-lab-playground-images"
+    github:
+      owner: containers
+      repo: podman-desktop-extension-ai-lab-playground-images
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:PodmanDesktop
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: containers/podman-desktop-extension-ai-lab-playground-images
+      globalIdPrefix: PD-AI-LAB-IMG
+    maxBatchSize: 50
+
+  - name: "PodmanDesktop - containers/podman.io"
+    github:
+      owner: containers
+      repo: podman.io
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:PodmanDesktop
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: containers/podman.io
+      globalIdPrefix: PD-PODMAN-IO
+    maxBatchSize: 50
+
+  # CRC org repos
+  - name: "PodmanDesktop - crc-org/crc-extension"
+    github:
+      owner: crc-org
+      repo: crc-extension
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:PodmanDesktop
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: crc-org/crc-extension
+      globalIdPrefix: PD-CRC-EXT
+    maxBatchSize: 50
+
+  - name: "PodmanDesktop - crc-org/macadam.js"
+    github:
+      owner: crc-org
+      repo: macadam.js
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:PodmanDesktop
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: crc-org/macadam.js
+      globalIdPrefix: PD-MACADAM-JS
+    maxBatchSize: 50
+
+  # MINC org repos
+  - name: "PodmanDesktop - minc-org/minc-extension"
+    github:
+      owner: minc-org
+      repo: minc-extension
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:PodmanDesktop
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: minc-org/minc-extension
+      globalIdPrefix: PD-MINC
+    maxBatchSize: 50
+
+  # Podman Desktop repos
+  - name: "PodmanDesktop - podman-desktop/e2e"
+    github:
+      owner: podman-desktop
+      repo: e2e
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:PodmanDesktop
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: podman-desktop/e2e
+      globalIdPrefix: PD-E2E
+    maxBatchSize: 50
+
+  - name: "PodmanDesktop - podman-desktop/extension-bootc"
+    github:
+      owner: podman-desktop
+      repo: extension-bootc
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:PodmanDesktop
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: podman-desktop/extension-bootc
+      globalIdPrefix: PD-EXT-BOOTC
+    maxBatchSize: 50
+
+  - name: "PodmanDesktop - podman-desktop/extension-compose"
+    github:
+      owner: podman-desktop
+      repo: extension-compose
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:PodmanDesktop
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: podman-desktop/extension-compose
+      globalIdPrefix: PD-EXT-COMPOSE
+    maxBatchSize: 50
+
+  - name: "PodmanDesktop - podman-desktop/extension-github"
+    github:
+      owner: podman-desktop
+      repo: extension-github
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:PodmanDesktop
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: podman-desktop/extension-github
+      globalIdPrefix: PD-EXT-GITHUB
+    maxBatchSize: 50
+
+  - name: "PodmanDesktop - podman-desktop/extension-grype"
+    github:
+      owner: podman-desktop
+      repo: extension-grype
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:PodmanDesktop
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: podman-desktop/extension-grype
+      globalIdPrefix: PD-EXT-GRYPE
+    maxBatchSize: 50
+
+  - name: "PodmanDesktop - podman-desktop/extension-kind"
+    github:
+      owner: podman-desktop
+      repo: extension-kind
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:PodmanDesktop
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: podman-desktop/extension-kind
+      globalIdPrefix: PD-EXT-KIND
+    maxBatchSize: 50
+
+  - name: "PodmanDesktop - podman-desktop/extension-kubernetes-contexts"
+    github:
+      owner: podman-desktop
+      repo: extension-kubernetes-contexts
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:PodmanDesktop
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: podman-desktop/extension-kubernetes-contexts
+      globalIdPrefix: PD-EXT-K8S-CTX
+    maxBatchSize: 50
+
+  - name: "PodmanDesktop - podman-desktop/extension-kubernetes-dashboard"
+    github:
+      owner: podman-desktop
+      repo: extension-kubernetes-dashboard
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:PodmanDesktop
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: podman-desktop/extension-kubernetes-dashboard
+      globalIdPrefix: PD-EXT-K8S-DASH
+    maxBatchSize: 50
+
+  - name: "PodmanDesktop - podman-desktop/extension-layers-explorer"
+    github:
+      owner: podman-desktop
+      repo: extension-layers-explorer
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:PodmanDesktop
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: podman-desktop/extension-layers-explorer
+      globalIdPrefix: PD-EXT-LAYERS
+    maxBatchSize: 50
+
+  - name: "PodmanDesktop - podman-desktop/extension-minikube"
+    github:
+      owner: podman-desktop
+      repo: extension-minikube
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:PodmanDesktop
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: podman-desktop/extension-minikube
+      globalIdPrefix: PD-EXT-MINIKUBE
+    maxBatchSize: 50
+
+  - name: "PodmanDesktop - podman-desktop/extension-pack-kubernetes"
+    github:
+      owner: podman-desktop
+      repo: extension-pack-kubernetes
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:PodmanDesktop
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: podman-desktop/extension-pack-kubernetes
+      globalIdPrefix: PD-EXT-PACK-K8S
+    maxBatchSize: 50
+
+  - name: "PodmanDesktop - podman-desktop/extension-podman-quadlet"
+    github:
+      owner: podman-desktop
+      repo: extension-podman-quadlet
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:PodmanDesktop
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: podman-desktop/extension-podman-quadlet
+      globalIdPrefix: PD-EXT-QUADLET
+    maxBatchSize: 50
+
+  - name: "PodmanDesktop - podman-desktop/extension-postgresql"
+    github:
+      owner: podman-desktop
+      repo: extension-postgresql
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:PodmanDesktop
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: podman-desktop/extension-postgresql
+      globalIdPrefix: PD-EXT-POSTGRES
+    maxBatchSize: 50
+
+  - name: "PodmanDesktop - podman-desktop/podman-desktop"
+    github:
+      owner: podman-desktop
+      repo: podman-desktop
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:PodmanDesktop
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: podman-desktop/podman-desktop
+      globalIdPrefix: PD-DESKTOP
+    maxBatchSize: 50
+
+  - name: "PodmanDesktop - podman-desktop/podman-desktop-catalog"
+    github:
+      owner: podman-desktop
+      repo: podman-desktop-catalog
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:PodmanDesktop
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: podman-desktop/podman-desktop-catalog
+      globalIdPrefix: PD-CATALOG
+    maxBatchSize: 50
+
+  # Red Hat Developer repos
+  - name: "PodmanDesktop - redhat-developer/podman-desktop-hummingbird-ext"
+    github:
+      owner: redhat-developer
+      repo: podman-desktop-hummingbird-ext
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:PodmanDesktop
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: redhat-developer/podman-desktop-hummingbird-ext
+      globalIdPrefix: PD-HUMMINGBIRD
+    maxBatchSize: 50
+
+  - name: "PodmanDesktop - redhat-developer/podman-desktop-image-checker-openshift-ext"
+    github:
+      owner: redhat-developer
+      repo: podman-desktop-image-checker-openshift-ext
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:PodmanDesktop
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: redhat-developer/podman-desktop-image-checker-openshift-ext
+      globalIdPrefix: PD-IMG-CHK-OS
+    maxBatchSize: 50
+
+  - name: "PodmanDesktop - redhat-developer/podman-desktop-redhat-account-ext"
+    github:
+      owner: redhat-developer
+      repo: podman-desktop-redhat-account-ext
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:PodmanDesktop
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: redhat-developer/podman-desktop-redhat-account-ext
+      globalIdPrefix: PD-RH-ACCT
+    maxBatchSize: 50
+
+  - name: "PodmanDesktop - redhat-developer/podman-desktop-rhel-ext"
+    github:
+      owner: redhat-developer
+      repo: podman-desktop-rhel-ext
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:PodmanDesktop
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: redhat-developer/podman-desktop-rhel-ext
+      globalIdPrefix: PD-RHEL
+    maxBatchSize: 50
+
+  - name: "PodmanDesktop - redhat-developer/podman-desktop-sandbox-ext"
+    github:
+      owner: redhat-developer
+      repo: podman-desktop-sandbox-ext
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:PodmanDesktop
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: redhat-developer/podman-desktop-sandbox-ext
+      globalIdPrefix: PD-SANDBOX
+    maxBatchSize: 50
+
+  # OpenKaiden repos
+  - name: "PodmanDesktop - openkaiden/kaiden"
+    github:
+      owner: openkaiden
+      repo: kaiden
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:PodmanDesktop
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: openkaiden/kaiden
+      globalIdPrefix: PD-KAIDEN
+    maxBatchSize: 50
+
+  - name: "PodmanDesktop - openkaiden/kdn"
+    github:
+      owner: openkaiden
+      repo: kdn
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - team:PodmanDesktop
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: openkaiden/kdn
+      globalIdPrefix: PD-KDN
     maxBatchSize: 50
