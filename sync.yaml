@@ -350,7 +350,7 @@ syncProjects:
 
   - name: "CRC - containers/podman"
     github:
-      owner: containers
+      owner: podman-container-tools
       repo: podman
       afterDate: "2026-06-01T00:00:00Z"
       syncMode: basic
@@ -360,7 +360,7 @@ syncProjects:
       issueType: Test Issue Mapping
     jira:
       projectKey: DPROD
-      component: containers/podman
+      component: podman-container-tools/podman
       globalIdPrefix: CRC-PODMAN
     maxBatchSize: 50
 
@@ -715,7 +715,7 @@ syncProjects:
   # Containers repos
   - name: "PodmanDesktop - containers/podman"
     github:
-      owner: containers
+      owner: podman-container-tools
       repo: podman
       afterDate: "2026-06-01T00:00:00Z"
       syncMode: basic
@@ -725,7 +725,7 @@ syncProjects:
       issueType: Test Issue Mapping
     jira:
       projectKey: DPROD
-      component: containers/podman
+      component: podman-container-tools/podman
       globalIdPrefix: PD-PODMAN
     maxBatchSize: 50
 
