@@ -148,6 +148,22 @@ syncProjects:
       sprintBoard: GH Sync Test
     maxBatchSize: 15
 
+  - name: "simple-test"
+    github:
+      owner: mattreid
+      repo: a-simple-test
+      afterDate: "2026-06-01T00:00:00Z"
+      syncMode: basic
+      assigneeAllowlist:
+        - mattreid
+    useMapping:
+      issueType: Test Issue Mapping
+    jira:
+      projectKey: DPROD
+      component: mattreid/a-simple-test
+      globalIdPrefix: MR-SIMPLE-TEST
+    maxBatchSize: 50
+
   # ============================================================================
   # Jkube Team - Multiple Repos
   # ============================================================================
