@@ -131,6 +131,7 @@ priorityTypeMappings:           # Optional - omit if not syncing priority
 # Sync configuration
 syncProjects:
   - name: "Jira Sync Test"
+    titlePrefix: "Test"
     github:
       owner: mattreid
       repo: test-sync-repo
@@ -149,6 +150,7 @@ syncProjects:
     maxBatchSize: 15
 
   - name: "simple-test"
+    titlePrefix: ""
     github:
       owner: mattreid
       repo: a-simple-test
@@ -168,7 +170,7 @@ syncProjects:
   # Jkube Team - Multiple Repos
   # ============================================================================
 
-  - name: "Jkube - fabric8io/kubernetes-client"
+  - name: "JKube fabric8io/kubernetes-client"
     github:
       owner: fabric8io
       repo: kubernetes-client
@@ -184,7 +186,7 @@ syncProjects:
       globalIdPrefix: JKUBE-FABRIC8-K8S
     maxBatchSize: 50
 
-  - name: "Jkube - eclipse-jkube/jkube"
+  - name: "JKube eclipse-jkube/jkube"
     github:
       owner: eclipse-jkube
       repo: jkube
@@ -200,7 +202,7 @@ syncProjects:
       globalIdPrefix: JKUBE-ECLIPSE-JKUBE
     maxBatchSize: 50
 
-  - name: "Jkube - cekit/actions-setup-cekit"
+  - name: "JKube cekit/actions-setup-cekit"
     github:
       owner: cekit
       repo: actions-setup-cekit
@@ -216,7 +218,7 @@ syncProjects:
       globalIdPrefix: JKUBE-CEKIT-SETUP
     maxBatchSize: 50
 
-  - name: "Jkube - quarkusio/quarkus"
+  - name: "JKube quarkusio/quarkus"
     github:
       owner: quarkusio
       repo: quarkus
@@ -232,7 +234,7 @@ syncProjects:
       globalIdPrefix: JKUBE-QUARKUS
     maxBatchSize: 50
 
-  - name: "Jkube - eclipse-jkube/kport"
+  - name: "JKube eclipse-jkube/kport"
     github:
       owner: eclipse-jkube
       repo: kport
@@ -248,7 +250,7 @@ syncProjects:
       globalIdPrefix: JKUBE-KPORT
     maxBatchSize: 50
 
-  - name: "Jkube - eclipse-jkube/jkube-images"
+  - name: "JKube eclipse-jkube/jkube-images"
     github:
       owner: eclipse-jkube
       repo: jkube-images
@@ -1166,7 +1168,7 @@ syncProjects:
     maxBatchSize: 50
 
   # OpenKaiden repos
-  - name: "PodmanDesktop - openkaiden/kaiden"
+  - name: "Kaiden - openkaiden/kaiden"
     github:
       owner: openkaiden
       repo: kaiden
@@ -1178,11 +1180,11 @@ syncProjects:
       issueType: Test Issue Mapping
     jira:
       projectKey: DPROD
-      component: openkaiden/kaiden
+      component: [openkaiden/kaiden, Kaiden]
       globalIdPrefix: PD-KAIDEN
     maxBatchSize: 50
 
-  - name: "PodmanDesktop - openkaiden/kdn"
+  - name: "Kaiden - openkaiden/kdn"
     github:
       owner: openkaiden
       repo: kdn
@@ -1194,6 +1196,6 @@ syncProjects:
       issueType: Test Issue Mapping
     jira:
       projectKey: DPROD
-      component: openkaiden/kdn
+      component: [openkaiden/kdn, Kaiden]
       globalIdPrefix: PD-KDN
     maxBatchSize: 50
