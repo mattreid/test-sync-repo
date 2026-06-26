@@ -1,0 +1,35 @@
+name: Backfill Sync
+
+on:
+  workflow_dispatch:
+    inputs:
+      repos:
+        description: 'Repo filter (comma-separated project names, or leave empty for all)'
+        required: false
+        type: string
+      batchSize:
+        description: 'Batch size per repo (default: 300)'
+        required: false
+        default: '300'
+        type: string
+      startDate:
+        description: 'Backfill from date (YYYY-MM-DD), overrides config'
+        required: false
+        type: string
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Enable debug logging
+        run: echo "ACTIONS_STEP_DEBUG=true" >> $GITHUB_ENV
+        # use development branch of the action (next is the build from the main branch)
+      - name: Run GitHub to Jira Action
+        uses: mattreid/github-to-jira-action@jira-cloud-refactor
+        with:
+          jira-host: ${{ secrets.JIRA_HOST }}
+          jira-email: ${{ secrets.JIRA_EMAIL }}
+          jira-write-token: ${{ secrets.JIRA_WRITE_TOKEN }}
+          github-read-token: ${{ secrets.GH_PROJECT_TOKEN }}
