@@ -38,6 +38,7 @@ jobs:
         # save the state using a custom token as default GITHUB_TOKEN does not have the required permissions
         # to save variables
       - name: persist state
+        if: always()
         env:
           GH_TOKEN: ${{ secrets.SET_VARIABLE_GITHUB_TOKEN }}
         run: |
