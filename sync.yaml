@@ -1,4 +1,3 @@
-# Team definitions
 teams:
   - name: DevSpaces
     members:
@@ -73,6 +72,10 @@ teams:
       - odockal
       - dgolovin
       - vzhukovs
+
+# Should we use the more efficient GitHubIssue field for duplicate detection?
+jiraProjectsWithGitHubIssueField:
+
 
 # GitHub Projects configuration
 githubProjects:
@@ -170,7 +173,7 @@ syncProjects:
   # Jkube Team - Multiple Repos
   # ============================================================================
 
-  - name: "JKube fabric8io/kubernetes-client"
+  - name: "JKube - fabric8io/kubernetes-client"
     github:
       owner: fabric8io
       repo: kubernetes-client
@@ -186,7 +189,7 @@ syncProjects:
       globalIdPrefix: JKUBE-FABRIC8-K8S
     maxBatchSize: 50
 
-  - name: "JKube eclipse-jkube/jkube"
+  - name: "JKube - eclipse-jkube/jkube"
     github:
       owner: eclipse-jkube
       repo: jkube
@@ -202,7 +205,7 @@ syncProjects:
       globalIdPrefix: JKUBE-ECLIPSE-JKUBE
     maxBatchSize: 50
 
-  - name: "JKube cekit/actions-setup-cekit"
+  - name: "JKube - cekit/actions-setup-cekit"
     github:
       owner: cekit
       repo: actions-setup-cekit
@@ -218,7 +221,7 @@ syncProjects:
       globalIdPrefix: JKUBE-CEKIT-SETUP
     maxBatchSize: 50
 
-  - name: "JKube quarkusio/quarkus"
+  - name: "JKube - quarkusio/quarkus"
     github:
       owner: quarkusio
       repo: quarkus
@@ -234,7 +237,7 @@ syncProjects:
       globalIdPrefix: JKUBE-QUARKUS
     maxBatchSize: 50
 
-  - name: "JKube eclipse-jkube/kport"
+  - name: "JKube - eclipse-jkube/kport"
     github:
       owner: eclipse-jkube
       repo: kport
@@ -250,7 +253,7 @@ syncProjects:
       globalIdPrefix: JKUBE-KPORT
     maxBatchSize: 50
 
-  - name: "JKube eclipse-jkube/jkube-images"
+  - name: "JKube - eclipse-jkube/jkube-images"
     github:
       owner: eclipse-jkube
       repo: jkube-images
