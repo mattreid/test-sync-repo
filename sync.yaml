@@ -75,6 +75,7 @@ teams:
 
 # Should we use the more efficient GitHubIssue field for duplicate detection?
 jiraProjectsWithGitHubIssueField:
+      - DPROD
 
 
 # GitHub Projects configuration
