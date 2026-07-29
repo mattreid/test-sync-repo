@@ -51,23 +51,6 @@ teams:
 jiraProjectsWithGitHubIssueField:
       - DPROD
 
-
-# GitHub Projects configuration
-githubProjects:
-  - name: Test sync project
-    storyPoints:
-      fieldName: Story Points
-      type: number
-    status:
-      fieldName: Status
-      type: singleSelect
-    sprint:
-      fieldName: Iteration
-      type: iteration
-    priority:
-      fieldName: Priority
-      type: singleSelect
-
 # Status mappings (GitHub → Jira)
 statusTypeMappings:
   - name: Test Status Mapping
@@ -93,56 +76,6 @@ issuesTypeMappings:
         toJira: Task
       - fromGithubLabel: story
         toJira: Story
-
-# Priority mappings (GitHub → Jira)
-priorityTypeMappings:           # Optional - omit if not syncing priority
-  - name: My Priority Mapping
-    default: Normal              # Default Jira priority when no mapping matches
-    mapping:
-      - fromGithub: P0     # Exact GitHub priority value
-        toJira: Critical         # Jira priority name (depends on your Jira instance)
-      - fromGithub: P1
-        toJira: Major
-      - fromGithub: P0
-        toJira: Minor
-
-# Sync configuration
-syncProjects:
-  - name: "Jira Sync Test"
-    titlePrefix: "Test"
-    github:
-      owner: mattreid
-      repo: test-sync-repo
-      projectsV2Board: Test sync project
-      afterDate: 2026-06-01            # Sync issues updated after this date
-      syncMode: full                   # Full mode with Projects v2
-    useMapping:
-      issueType: Test Issue Mapping
-      statusType: Test Status Mapping
-      priorityType: My Priority Mapping
-    jira:
-      projectKey: DPROD
-      component: Upstream
-      globalIdPrefix: TEST-SYNC
-      sprintBoard: GH Sync Test
-    maxBatchSize: 15
-
-  - name: "simple-test"
-    titlePrefix: ""
-    github:
-      owner: mattreid
-      repo: a-simple-test
-      afterDate: "2026-06-01T00:00:00Z"
-      syncMode: basic
-      assigneeAllowlist:
-        - mattreid
-    useMapping:
-      issueType: Test Issue Mapping
-    jira:
-      projectKey: DPROD
-      component: mattreid/a-simple-test
-      globalIdPrefix: MR-SIMPLE-TEST
-    maxBatchSize: 50
 
     # ============================================================================
     # CRC Team - 8 Repos
