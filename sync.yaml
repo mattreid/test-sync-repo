@@ -51,17 +51,9 @@ teams:
 jiraProjectsWithGitHubIssueField:
       - DPROD
 
-# Status mappings (GitHub → Jira)
-statusTypeMappings:
-  - name: Test Status Mapping
-    default: New
-    mapping:
-      - fromGithub: Todo
-        toJira: New
-      - fromGithub: In progress
-        toJira: In Progress
-      - fromGithub: Done
-        toJira: Closed
+githubProjects: []
+statusTypeMappings: []
+priorityTypeMappings: []
 
 # Issue type mappings (GitHub labels → Jira issue types)
 issuesTypeMappings:
@@ -80,7 +72,7 @@ issuesTypeMappings:
     # ============================================================================
     # CRC Team - 8 Repos
     # ============================================================================
-
+syncProjects:
   - name: "CRC - crc-org/crc"
     github:
       owner: crc-org
@@ -175,22 +167,6 @@ issuesTypeMappings:
       projectKey: DPROD
       component: crc-org/admin-helper
       globalIdPrefix: CRC-ADMIN
-    maxBatchSize: 50
-
-  - name: "CRC - containers/podman"
-    github:
-      owner: podman-container-tools
-      repo: podman
-      afterDate: "2026-06-01T00:00:00Z"
-      syncMode: basic
-      assigneeAllowlist:
-        - team:CRC
-    useMapping:
-      issueType: Test Issue Mapping
-    jira:
-      projectKey: DPROD
-      component: podman-container-tools/podman
-      globalIdPrefix: CRC-PODMAN
     maxBatchSize: 50
 
   - name: "CRC - openshift/release"
