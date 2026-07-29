@@ -1,9 +1,4 @@
 teams:
-  - name: Jkube
-    members:
-      - manusa
-      - ash-thakur-rh
-
   - name: CRC
     members:
       - lstocchi
@@ -40,6 +35,17 @@ teams:
       - odockal
       - dgolovin
       - vzhukovs
+
+  - name: Kaiden
+    members:
+      - jeffmaury
+      - gastoner
+      - bmahabirbu
+      - benoitf
+      - fbricon
+      - MarsKubeX
+      - serbangeorge-m
+      - vancura
 
 # Should we use the more efficient GitHubIssue field for duplicate detection?
 jiraProjectsWithGitHubIssueField:
@@ -138,108 +144,8 @@ syncProjects:
       globalIdPrefix: MR-SIMPLE-TEST
     maxBatchSize: 50
 
-  # ============================================================================
-  # Jkube Team - Multiple Repos
-  # ============================================================================
-
-  - name: "JKube - fabric8io/kubernetes-client"
-    github:
-      owner: fabric8io
-      repo: kubernetes-client
-      afterDate: "2026-06-01T00:00:00Z"
-      syncMode: basic
-      assigneeAllowlist:
-        - team:Jkube
-    useMapping:
-      issueType: Test Issue Mapping
-    jira:
-      projectKey: DPROD
-      component: fabric8io/kubernetes-client
-      globalIdPrefix: JKUBE-FABRIC8-K8S
-    maxBatchSize: 50
-
-  - name: "JKube - eclipse-jkube/jkube"
-    github:
-      owner: eclipse-jkube
-      repo: jkube
-      afterDate: "2026-06-01T00:00:00Z"
-      syncMode: basic
-      assigneeAllowlist:
-        - team:Jkube
-    useMapping:
-      issueType: Test Issue Mapping
-    jira:
-      projectKey: DPROD
-      component: eclipse-jkube/jkube
-      globalIdPrefix: JKUBE-ECLIPSE-JKUBE
-    maxBatchSize: 50
-
-  - name: "JKube - cekit/actions-setup-cekit"
-    github:
-      owner: cekit
-      repo: actions-setup-cekit
-      afterDate: "2026-06-01T00:00:00Z"
-      syncMode: basic
-      assigneeAllowlist:
-        - team:Jkube
-    useMapping:
-      issueType: Test Issue Mapping
-    jira:
-      projectKey: DPROD
-      component: cekit/actions-setup-cekit
-      globalIdPrefix: JKUBE-CEKIT-SETUP
-    maxBatchSize: 50
-
-  - name: "JKube - quarkusio/quarkus"
-    github:
-      owner: quarkusio
-      repo: quarkus
-      afterDate: "2026-06-01T00:00:00Z"
-      syncMode: basic
-      assigneeAllowlist:
-        - team:Jkube
-    useMapping:
-      issueType: Test Issue Mapping
-    jira:
-      projectKey: DPROD
-      component: quarkusio/quarkus
-      globalIdPrefix: JKUBE-QUARKUS
-    maxBatchSize: 50
-
-  - name: "JKube - eclipse-jkube/kport"
-    github:
-      owner: eclipse-jkube
-      repo: kport
-      afterDate: "2026-06-01T00:00:00Z"
-      syncMode: basic
-      assigneeAllowlist:
-        - team:Jkube
-    useMapping:
-      issueType: Test Issue Mapping
-    jira:
-      projectKey: DPROD
-      component: eclipse-jkube/kport
-      globalIdPrefix: JKUBE-KPORT
-    maxBatchSize: 50
-
-  - name: "JKube - eclipse-jkube/jkube-images"
-    github:
-      owner: eclipse-jkube
-      repo: jkube-images
-      afterDate: "2026-06-01T00:00:00Z"
-      syncMode: basic
-      assigneeAllowlist:
-        - team:Jkube
-    useMapping:
-      issueType: Test Issue Mapping
-    jira:
-      projectKey: DPROD
-      component: eclipse-jkube/jkube-images
-      globalIdPrefix: JKUBE-IMAGES
-    maxBatchSize: 50
-
     # ============================================================================
-    # CRC Team - Multiple Repos
+    # CRC Team - 8 Repos
     # ============================================================================
 
   - name: "CRC - crc-org/crc"
@@ -371,7 +277,7 @@ syncProjects:
     maxBatchSize: 50
 
   # ============================================================================
-  # PodmanDesktop Team - Multiple Repos
+  # PodmanDesktop Team - 27 Repos
   # ============================================================================
 
   # Containers repos
@@ -811,7 +717,10 @@ syncProjects:
       globalIdPrefix: PD-SANDBOX
     maxBatchSize: 50
 
-  # OpenKaiden repos
+  # ============================================================================
+  # Kaiden Team - 1 Repo
+  # ============================================================================
+  
   - name: "Kaiden - openkaiden/kaiden"
     github:
       owner: openkaiden
@@ -819,27 +728,11 @@ syncProjects:
       afterDate: "2026-06-01T00:00:00Z"
       syncMode: basic
       assigneeAllowlist:
-        - team:PodmanDesktop
+        - team:Kaiden
     useMapping:
       issueType: Test Issue Mapping
     jira:
       projectKey: DPROD
       component: [openkaiden/kaiden, Kaiden]
       globalIdPrefix: PD-KAIDEN
-    maxBatchSize: 50
-
-  - name: "Kaiden - openkaiden/kdn"
-    github:
-      owner: openkaiden
-      repo: kdn
-      afterDate: "2026-06-01T00:00:00Z"
-      syncMode: basic
-      assigneeAllowlist:
-        - team:PodmanDesktop
-    useMapping:
-      issueType: Test Issue Mapping
-    jira:
-      projectKey: DPROD
-      component: [openkaiden/kdn, Kaiden]
-      globalIdPrefix: PD-KDN
     maxBatchSize: 50
